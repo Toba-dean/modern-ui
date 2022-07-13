@@ -37,11 +37,13 @@ const NavBar = () => {
       {/* Mobile Menu */}
       <div className='gpt3__navbar-menu'>
         {
+          // show the line while the toggle menu is false and when clicked set the togglemenu true and change the icon to the crossline
           toggleMenu ? 
           <RiCloseLine color='#fff' size={27} onClick={() => setToggleMenu(false)} /> : 
           <RiMenu3Line color='#fff' size={27} onClick={() => setToggleMenu(true)} />
         }
         {
+          // show the menu on toggle menu === true
           toggleMenu && (
             <div className='gpt3__navbar-menu_container scale-up-center'>
               <div className='gpt3__navbar-menu_container-links'>
